@@ -70,7 +70,7 @@ attr_reader :id
     db.close
     # return chosen_bounty[0]["name"]
     return chosen_bounty[0]
-    # The db returns an array where each object is a hash of a row from the table!!!
+    # The db returns an enumerable where each item is a hash of a row from the table!!!
     result = chosen_bounty.map {|bounty| Bounty.new(bounty)}
     #This is creating an array of 1 bounty objects !!!
     #so now we can call the class methods on it
